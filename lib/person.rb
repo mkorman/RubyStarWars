@@ -9,11 +9,15 @@ class Person
     @species = species
   end
 
+  def non_human?
+    @species != :human
+  end
+
   def to_s
-    if species==:human then
-      @name
-    else
+    if self.non_human? then
       "#{@name} (#{@species})"
+    else
+      @name
     end
   end
 end

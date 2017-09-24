@@ -12,6 +12,18 @@ class TestPerson < MiniTest::Test
     assert_equal(:human, person.species)
   end
 
+  def test_humans_are_not_nonhumans
+    person = Person.new("Luke")
+    refute (person.non_human?)
+  end
+
+  def test_other_species_are_nonhumans
+    [:droid, :wookie, :geonosian, :thrandoshan, :sullustan, :mon_calamari].each { |species|
+      person = Person.new("Luke", species)
+      assert (person.non_human?)
+    }
+  end
+
   def test_to_s_includes_species_if_nonhuman
     person = Person.new('Chewbacca',:wookie)
     assert_includes(person.to_s, "wookie")
