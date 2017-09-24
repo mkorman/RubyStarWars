@@ -1,13 +1,7 @@
+
 require "./lib/spaceship"
 require "./lib/probe"
 require "./lib/person"
-
-class ModifiedLightFreighter < Spaceship
-  def initialize(name, owner)
-    super('Modified light freighter', name, owner)
-  end
-end
-
 
 han = Person.new('Han Solo')
 chewie = Person.new('Chewbacca', :wookie)

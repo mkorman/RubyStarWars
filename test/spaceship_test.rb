@@ -15,14 +15,14 @@ class TestSpaceship < MiniTest::Test
 
   def test_cargo
     assert(@ship.cargo.size == 0)
-    @ship << 'Flux condenser'
+    @ship << 'Flux capacitor'
     @ship << 'Wotsits'
     @ship << 'Thingybobby'
     @ship << 'Watchamacallit'
     assert_equal(4, @ship.cargo.size)
     @ship.cargo -= ['Wotsits', 'Thingybobby']
     assert_equal(2, @ship.cargo.size)
-    assert_includes(@ship.cargo, 'Flux condenser')
+    assert_includes(@ship.cargo, 'Flux capacitor')
   end
 
   def test_needs_pilot_to_launch
