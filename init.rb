@@ -1,5 +1,4 @@
-
-require "./lib/spaceship"
+require "./lib/ModifiedLightFreighter"
 require "./lib/probe"
 require "./lib/person"
 

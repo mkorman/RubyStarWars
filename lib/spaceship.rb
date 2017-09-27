@@ -12,7 +12,7 @@ class Spaceship
   end
 
   # More idiomatic to use attr_accessor
-  attr_accessor :name, :owner, :pilot, :copilot, :current_location, :passengers, :cargo
+  attr_accessor :name, :owner, :affiliation, :pilot, :copilot, :current_location, :passengers, :cargo
   attr_reader :model
 
   # constructor is defined via 'initialize' method
@@ -67,8 +67,3 @@ class Spaceship
   end
 end
 
-class ModifiedLightFreighter < Spaceship
-  def initialize(name, owner)
-    super('Modified light freighter', name, owner)
-  end
-end
